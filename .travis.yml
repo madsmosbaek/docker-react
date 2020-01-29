@@ -7,3 +7,14 @@ before_install:
 
 script:
   - docker run -e CI=true mem/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstack
+  region: "us-west-2" #<-- Depends on chosen region when setting up AWS!
+  app: "docker" #<-- Depends on chosen app name when setting up AWS!
+  env: "Docker-env" #<-- Depends on chosen environment name when setting up AWS!
+  bucket_name: "INSERT_BUCKET NAME" #<--- Bucket name is a kind of name for the HD on AWS (can be found under S3 in AWS)
+  bucket_path: "docker" #<-- same as 'app'
+  on:
+    branch: master
+
