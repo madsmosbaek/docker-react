@@ -13,5 +13,5 @@ jobs:
     - stage: push docker image
       after_success:
       - docker login -u $DOCKER_USERNAME --password $DOCKER_PASSWORD
-      - docker build -t $DOCKER_USERNAMW/docker-react .
+      - docker build -t $DOCKER_USERNAME/docker-react .
       - docker push $DOCKER_USERNAME/docker-react
