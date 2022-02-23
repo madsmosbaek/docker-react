@@ -3,7 +3,7 @@ kind: Kustomization
 
 images:
 - name: mempraqma/docker-react
-  newTag: latest
+  newTag: 2.0.1
 
 resources:
   - deployment.yaml
