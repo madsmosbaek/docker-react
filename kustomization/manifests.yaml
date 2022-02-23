@@ -19,7 +19,7 @@ metadata:
   name: docker-react
 spec:
   containers:
-  - image: mempraqma/docker-react:2.0.0
+  - image: mempraqma/docker-react:latest
     name: client
     ports:
     - containerPort: 3000
